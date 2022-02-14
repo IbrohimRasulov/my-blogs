@@ -8,7 +8,7 @@ const useFetch = (url) => {
   useEffect(() => {
     const abortCont = new AbortController();
 
-    setTimeout(() => {
+    setTimeout(() => { // timeout is for just giving an idea of fetching data takes time
       const fetchData = async () => {
         try {
           const response = await fetch(url, {signal: abortCont.signal});
