@@ -4,7 +4,7 @@
 
 > This app shows you blogs list by fetching data from local database with JSON Server, and allows to add and delete blogs. This is a small project to practise Components, Hooks, States, Router in React.
 
-
+https://user-images.githubusercontent.com/78875455/153818810-5e73e800-7d09-4fea-9ea1-588be2547380.mov
 
 ## Built With
 
