@@ -13,6 +13,10 @@ https://user-images.githubusercontent.com/78875455/153818810-5e73e800-7d09-4fea-
 - React, JSX
 - React Router
 
+## Live Demo
+
+[Live Demo Link](https://62227b9d6423c50aaf6bfbed--loving-hawking-f2842b.netlify.app/)
+
 ## Authors
 
 👤 **Ibrohim Rasulov**
