@@ -1,22 +1,31 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
 
 const Create = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [body, setBody] = useState('');
+  const [isPending, setIsPending] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const blog = { title, author, body };
 
-    fetch('http://localhost:8000/blogs', {
+    setIsPending(true);
+
+    setTimeout(() => { // timeout is for just showing the pending button
+      fetch('http://localhost:8000/blogs', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
-      body:JSON.stringify(blog)
+      body: JSON.stringify(blog)
     }).then(() => {
       console.log('new blog added');
-    })
+      setIsPending(false);
+      navigate('/');
+    });
+    }, 1000);
   }
 
   return (
@@ -48,7 +57,8 @@ const Create = () => {
           value={body}
           onChange={(e) => setBody(e.target.value)}
         />
-        <button>Add Blog</button>
+        {!isPending && <button>Add Blog</button>}
+        {isPending && <button disabled>Adding blog...</button>}
       </form>
     </div>
   );
