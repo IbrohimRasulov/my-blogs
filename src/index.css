@@ -3,7 +3,8 @@
 /* base styles */
 * {
   margin: 0;
-  font-family: "Quicksand"; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
+  font-family: "Quicksand";
+  /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
   color: #333;
 }
 
@@ -59,4 +60,61 @@
 
 .blog-preview a {
   text-decoration: none;
+}
+
+/* create new blog form */
+.create {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.create label {
+  text-align: left;
+  display: block;
+}
+
+.create h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+
+.create div {
+  width: 45%;
+  display: inline-block;
+}
+
+.create span {
+  width: 10%;
+  display: inline-block;
+}
+
+.create textarea {
+  height: 200px;
+  resize: none;
+}
+
+.create input,
+.create textarea {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  display: block;
+  font-size: 16px;
+  outline: none;
+}
+
+.create button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
 }
